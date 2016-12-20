@@ -10,6 +10,7 @@ function playSound(e){
 }
 
 function removeTransform(e){
+	console.log(e.propertyName);
 	if(e.propertyName !== "transform"){
 		return;
 	}
@@ -18,7 +19,7 @@ function removeTransform(e){
 }
 var dom = document.querySelectorAll(".key");
 var keys = Array.from(dom);
-console.log(keys);
+//console.log(keys);
 keys.forEach(function(key){
 	return key.addEventListener("transitionend", removeTransform);
 });
